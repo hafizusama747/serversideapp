@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('./partials/header'); %>
+</header>
+<h1 id="taskmanager">Task Manager App</h1>
+<main>
+  <div class="jumbotron">
+    <% if (user) { %>
+      <div class="card">
+        <div class="taskprofile">
+          <a class="navbar-brand" href="/tasks">My Tasks</a>
+          <a class="navbar-brand" href="/profile">View Profile</a>
+        </div>                                 
+      </div>     
+    <%} else { %>
+      <h5>You need to Sign in to Add or view your tasks</h5>
+      <li class="nav-item">
+        <a class="navbar-brand" href="http://localhost:3000/login">Sign in</a>
+      </li>
+    <% } %>  
+    
+  </div>
+</main>
+
+<footer>
+  <%- include('./partials/footer'); %>
+</footer>
+
+</body>
+</html>

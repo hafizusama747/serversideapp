@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+  <%- include('../partials/header'); %>
+</header>
+
+<main>
+    <div class="container">
+      <h1>Add a new Task</h1>
+        <form action="/tasks/add" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="title" > <b>Title</b></label>
+                <input type="text"  class="form-control" placeholder="Title" name="title" required>
+            </div>
+           
+            <div>
+                <a href="/tasks" class="btn btn-warning"><b>Cancel</b></a>
+                <button  type="submit" class="btn btn-primary"><b>Save</b></button>
+            </div>
+
+        </form>
+        
+      </div>
+  
+</main>
+
+<footer>
+  <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>

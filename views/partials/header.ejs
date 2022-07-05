@@ -1,0 +1,28 @@
+<nav id="navv" class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="http://localhost:3000">Task Manager App</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <% if (user) { %>
+            
+              <div id="main">
+                <a class="navbar-brand" href="/profile"><%= user.name%></a>
+
+                <a class="navbar-brand" href="/logout">Logout</a>
+              </div>
+              
+              </ul>
+          
+          <%} else { %>
+          <div id="main1">
+            <a class="navbar-brand" href="http://localhost:3000/register">Sign up</a>
+           
+           
+            <a class="navbar-brand" href="http://localhost:3000/login">Sign in</a>
+          </div >
+             
+            
+          <% } %>          
+        </ul>
+      </div>
+    </div>
+  </nav>
